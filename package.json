@@ -1,7 +1,7 @@
 {
   "name": "aws-dynamodb-factory-js",
   "version": "1.0.0",
-  "description": "Dynamodb factory for a javascript language.",
+  "description": "Dynamodb factory for a javascript.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/**/*.spec.js"
