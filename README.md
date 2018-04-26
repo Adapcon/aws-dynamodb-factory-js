@@ -1,4 +1,4 @@
-# Validate-args-js
+# aws-dynamodb-factory-js
 
 Validate arguments for a Javascript.
 
