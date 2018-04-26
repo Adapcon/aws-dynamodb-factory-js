@@ -32,5 +32,7 @@
     "nyc": "^11.6.0",
     "sinon": "^4.5.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "aws-sdk": "^2.229.1"
+  }
 }
