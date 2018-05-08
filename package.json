@@ -1,6 +1,6 @@
 {
   "name": "aws-dynamodb-factory-js",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Dynamodb factory for a javascript.",
   "main": "index.js",
   "scripts": {
