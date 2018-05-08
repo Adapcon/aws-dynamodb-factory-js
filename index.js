@@ -1,12 +1,12 @@
 const AWS = require('aws-sdk')
 
 class DynamodbFactory {
-    static raw({options} = {}) {
-        return new AWS.DynamoDB(this._getOptions(options))
+    static raw({options, offlinePort} = {}) {
+        return new AWS.DynamoDB(this._getOptions({options, offlinePort}))
     }
     
-    static doc({options} = {}) {
-        return new AWS.DynamoDB.DocumentClient(this._getOptions(options))
+    static doc({options, offlinePort} = {}) {
+        return new AWS.DynamoDB.DocumentClient(this._getOptions({options, offlinePort}))
     }
 
     static _getOptions({options, offlinePort} = {}) {
