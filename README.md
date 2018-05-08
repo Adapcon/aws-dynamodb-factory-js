@@ -33,7 +33,9 @@ let dynamo = DynamodbFactory.raw();
 
 ```js
 const DynamodbFactory = require('aws-dynamodb-factory-js')
-let dynamo = DynamodbFactory.raw({ ... });
+let dynamo = DynamodbFactory.raw({
+    options: { ... }
+});
 
 //return new AWS.DynamoDB({ ... })
 ```
@@ -44,9 +46,16 @@ let dynamo = DynamodbFactory.raw({ ... });
 const DynamodbFactory = require('aws-dynamodb-factory-js')
 
 process.env.IS_OFFLINE = true;
+
 let dynamo = DynamodbFactory.raw();
 
 //return new AWS.DynamoDB({ region: "localhost", endpoint: "http://localhost:8000" })
+
+let dynamoCustom = DynamodbFactory.raw({
+    offlinePort: 3001
+});
+
+//return new AWS.DynamoDB({ region: "localhost", endpoint: "http://localhost:3001" })
 ```
 
 #### DocumentClient
@@ -62,7 +71,9 @@ let dynamo = DynamodbFactory.doc();
 
 ```js
 const DynamodbFactory = require('aws-dynamodb-factory-js')
-let dynamo = DynamodbFactory.doc({ ... });
+let dynamo = DynamodbFactory.doc({
+    options: { ... }
+});
 
 //return new AWS.DynamoDB.DocumentClient({ ... })
 ```
@@ -76,6 +87,12 @@ process.env.IS_OFFLINE = true;
 let dynamo = DynamodbFactory.doc();
 
 //return new AWS.DynamoDB.DocumentClient({ region: "localhost", endpoint: "http://localhost:8000" })
+
+let dynamoCustom = DynamodbFactory.doc({
+    offlinePort: 3001
+});
+
+//return new AWS.DynamoDB.DocumentClient({ region: "localhost", endpoint: "http://localhost:3001" })
 ```
 
 
