@@ -10,7 +10,7 @@ declare class DynamodbFactory {
 
     static doc(opts?: FactoryOptions<DynamoDB.Types.ClientConfiguration & DynamoDB.DocumentClient.DocumentClientOptions>): DynamoDB.DocumentClient
 
-    static _getOptions<T extends DynamoDB.Types.ClientConfiguration>(opts: FactoryOptions<T>): T
+    static _getOptions<T extends DynamoDB.Types.ClientConfiguration>(opts?: FactoryOptions<T>): T
 }
 
 export default DynamodbFactory
