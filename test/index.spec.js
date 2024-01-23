@@ -2,7 +2,8 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 
 const DynamodbFactory = require('../index')
-const AWS = require('aws-sdk')
+const { DynamoDB } = require('@aws-sdk/client-dynamodb');
+const { DynamoDBDocument } = require('@aws-sdk/lib-dynamodb');
 
 let stubAwsDynamoDbRaw;
 let stubAwsDynamoDbDoc;
@@ -11,10 +12,8 @@ describe('UTIL - DynamodbFactory', () => {
 
     beforeEach(() => {
         delete process.env.IS_OFFLINE;
-        stubAwsDynamoDbRaw = sinon.stub(AWS, 'DynamoDB');
-        stubAwsDynamoDbRaw.DocumentClient = () => {};
-
-        stubAwsDynamoDbDoc = sinon.stub(stubAwsDynamoDbRaw, 'DocumentClient')
+        stubAwsDynamoDbRaw = sinon.stub(DynamoDB, 'constructor');
+        stubAwsDynamoDbDoc = sinon.stub(DynamoDBDocument, 'from');
     });
     afterEach(() => {
         stubAwsDynamoDbRaw.restore()
