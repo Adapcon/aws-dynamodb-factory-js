@@ -1,5 +1,5 @@
 {
-  "name": "Adapcon/adapcon-utils-js (Node.js & TypeScript)",
+  "name": "Adapcon/aws-dynamodb-factory-js (Node.js & TypeScript)",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
   "updateContentCommand": "npm i",
   "customizations": {
